@@ -1,12 +1,12 @@
 def permutate(s):
-    res = []
+    res = set()
     if len(s) <= 1:
-        res.append(s)
+        res.add(s)
     else:
         for c in s:
             tmp = s
-            for p in permutate(tmp.replace(c,'')):
-                res.append(c+p)
+            for p in permutate(tmp.replace(c,'',1)):
+                res.add(c+p)
     return res
 
 
