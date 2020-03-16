@@ -1,13 +1,12 @@
 def permutate(s):
-    res = set()
+    res = []
     if len(s) <= 1:
-        res.add(s)
+        res.append(s)
     else:
-        for c in s:
-            tmp = s
-            for p in permutate(tmp.replace(c,'',1)):
-                res.add(c+p)
+        for i in range(len(s)):
+            for p in permutate(s[:i] + s[i+1:]):
+                res.append(s[i]+p)
     return res
 
 
-print(permutate('ABC'))
+print(permutate('AAA'))
