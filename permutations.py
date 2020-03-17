@@ -8,5 +8,4 @@ def permutate(s):
                 res.append(s[i]+p)
     return res
 
-
-print(permutate('AAA'))
+print(permutate('(())'))
