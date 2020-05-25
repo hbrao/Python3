@@ -1,4 +1,8 @@
 data = [1, 2, 3, 4, 5, 6, 7]
+
+except3 = [ val for i,val in enumerate(data) if i != 3 ]
+print(except3)
+
 odds = [val for val in data if not val % 2 == 0]
 print(odds)
 
