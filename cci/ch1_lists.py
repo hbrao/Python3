@@ -1,5 +1,6 @@
 from random import randint
-from ds import LinkedList, LinkedNode
+from pyds.core.LinkedNode import LinkedNode
+from pyds.classes.LinkedList import LinkedList
 
 
 def s1_remove_duplicates(l: LinkedList) -> None:

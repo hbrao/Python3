@@ -1,4 +1,7 @@
-from ds import DirectedGraphAL, LinkedQueue, BinaryTree, BinaryNode
+from pyds.classes.LinkedQueue import LinkedQueue
+from pyds.classes.BinaryTree import  BinaryTree
+from pyds.classes.DirectedGraphAL import DirectedGraphAL
+from pyds.core import BinaryNode
 from random import randint
 
 
