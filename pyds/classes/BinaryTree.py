@@ -1,4 +1,4 @@
-from ds.struct.BinaryNode import BinaryNode
+from pyds.core.BinaryNode import BinaryNode
 class BinaryTree:
     def __init__(self):
         self.root = None

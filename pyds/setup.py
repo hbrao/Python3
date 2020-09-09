@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_packages
 
 setup(
     name='pyds',
@@ -7,5 +7,5 @@ setup(
     author='Hanumantha Rao Banda',
     author_email='hanu.16aug@outlook.com',
     url='www.myrobot.com',
-    py_modules=['LinkedNode','BinaryNode','Stack','LinkedList','LinkedQueue','PrefixTree','BinaryTree','DirectedGraphAL']
+    packages=find_packages()
 )

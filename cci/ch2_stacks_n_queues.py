@@ -1,6 +1,7 @@
-from ds import LinkedStack, LinkedList, LinkedQueue
 from random import randint
-
+from pyds.classes.LinkedList import LinkedList
+from pyds.classes.LinkedStack import LinkedStack
+from pyds.classes.LinkedQueue import LinkedQueue
 l = LinkedList()
 s = LinkedStack()
 q = LinkedQueue()

@@ -1,4 +1,4 @@
-from ds.struct.LinkedNode import LinkedNode
+from pyds.core.LinkedNode import LinkedNode
 class LinkedQueue:
     def __init__(self):
         self.head = None
