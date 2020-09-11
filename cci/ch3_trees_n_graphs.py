@@ -1,7 +1,7 @@
 from pyds.classes.LinkedQueue import LinkedQueue
 from pyds.classes.BinaryTree import  BinaryTree
 from pyds.classes.DirectedGraphAL import DirectedGraphAL
-from pyds.core import BinaryNode
+from pyds.core.TreeNode import TreeNode
 from random import randint
 
 
@@ -44,7 +44,7 @@ def s2_build_tree_sorted_array(arr) -> BinaryTree:
     return bt
 
 
-def s3_bfs_tree(bn: BinaryNode, depth, res):
+def s3_bfs_tree(bn: TreeNode, depth, res):
     if bn is not None:
         if depth >= len(res):
             res.append([])

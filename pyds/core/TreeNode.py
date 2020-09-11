@@ -1,4 +1,4 @@
-class BinaryNode:
+class TreeNode:
     def __init__(self, value):
         self.value = value
         self.left = None
@@ -14,7 +14,7 @@ class BinaryNode:
 
     def add_to_subtree(self, parent, val):
         if parent is None:
-            return BinaryNode(val)
+            return TreeNode(val)
         parent.add(val)
         # Return the parent as it is.
         # This ensures left / right nodes of grand parent nodes untouched.

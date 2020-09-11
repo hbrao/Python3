@@ -7,7 +7,7 @@ classes/LinkedQueue.py
 classes/LinkedStack.py
 classes/PrefixTree.py
 classes/__init__.py
-core/BinaryNode.py
+core/TreeNode.py
 core/LinkedNode.py
 core/Stack.py
 core/__init__.py
