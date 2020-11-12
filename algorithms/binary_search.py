@@ -19,7 +19,7 @@ def binary_search(sl, low, high, val):
         return None
 
 
-def nr_binary_search(sl, val):
+def non_recursive_binary_search(sl, val):
     low = 0
     high = len(sl) - 1
     while low <= high:
@@ -30,15 +30,15 @@ def nr_binary_search(sl, val):
             high = mid - 1
         else:
             return mid
-    return - (low)
+    return - low
 
 
 data = [random.randint(0, 10) for i in range(10)]
 data.sort()
-val = random.randint(0, 10)
+value = random.randint(0, 10)
 
-idx = binary_search(data, 0, len(data) - 1, val)
-print("Found {} at index {} in {}".format(val, idx, data))
+idx = binary_search(data, 0, len(data) - 1, value)
+print("Found {} at index {} in {}".format(value, idx, data))
 
-jdx = nr_binary_search(data, val)
-print("Found {} at index {} in {}".format(val, jdx, data))
+jdx = non_recursive_binary_search(data, value)
+print("Found {} at index {} in {}".format(value, jdx, data))
