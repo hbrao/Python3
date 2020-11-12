@@ -3,7 +3,7 @@ BUCKET_COUNT = 3
 THRESHOLD = .5
 
 
-class Stack:
+class Stack2:
     def __init__(self):
         self.stk = [None] * BUCKET_COUNT
         for i in range(BUCKET_COUNT):
