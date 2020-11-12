@@ -1,16 +1,16 @@
 from random import randint
-from pyds.core.LinkedNode import LinkedNode
-from pyds.classes.LinkedList import LinkedList
+from leet.core.ListNode import ListNode
+from leet.impl.LinkedList import LinkedList
 
 
 def s1_remove_duplicates(l: LinkedList) -> None:
     n1 = l.head
     while n1 is not None:
-        val = n1.value
+        val = n1.val
         prev = n1
         n2 = n1.next
         while n2 is not None:
-            if n2.value == val:
+            if n2.val == val:
                 prev.next = n2.next
             else:
                 prev = n2
@@ -29,13 +29,13 @@ def s2_kth_to_last(l: LinkedList, i: int) -> int:
     while nk is not None and n2 is not None:
         nk = nk.next
         n2 = n2.next
-    return nk.value
+    return nk.val
 
 
-def s3_del_node(node: LinkedNode) -> None:
+def s3_del_node(node: ListNode) -> None:
     prev = None
     while node.next is not None:
-        node.value = node.next.value
+        node.val = node.next.val
         prev = node
         node = node.next
     prev.next = None
@@ -48,9 +48,9 @@ def s4_list_partition(l: LinkedList, x: int) -> None:
     prev = l.head
     n = l.head.next
     while n is not None:
-        if n.value < x:
+        if n.val < x:
             prev.next = n.next
-            l.prepend(n.value)
+            l.prepend(n.val)
         else:
             prev = n
         n = n.next
@@ -65,10 +65,10 @@ def s5_sum_lists(l1: LinkedList, l2: LinkedList) -> LinkedList:
     while n1 or n2:
         x = y = 0
         if n1:
-            x = n1.value
+            x = n1.val
             n1 = n1.next
         if n2:
-            y = n2.value
+            y = n2.val
             n2 = n2.next
         r = (x + y + q) % 10
         q = (x + y + q) // 10
@@ -83,14 +83,14 @@ def s6_is_palindrome(l: LinkedList) -> bool:
     n1 = l.head
     n2 = r.head
     while n1 is not None:
-        if n1.value != n2.value:
+        if n1.val != n2.val:
             return False
         n1 = n1.next
         n2 = n2.next
     return True
 
 
-def s7_get_intersection(l1: LinkedNode, l2: LinkedNode) -> LinkedNode:
+def s7_get_intersection(l1: ListNode, l2: ListNode) -> ListNode:
     n1 = l1
     n2 = l2
     l1s = l2s = 1
@@ -121,7 +121,7 @@ def s7_get_intersection(l1: LinkedNode, l2: LinkedNode) -> LinkedNode:
         return None
 
 
-def s8_detect_loop(l: LinkedList) -> LinkedNode:
+def s8_detect_loop(l: LinkedList) -> ListNode:
     n1 = l.head
     n2 = l.head
     while n1 and n2 and n2.next:
@@ -159,8 +159,8 @@ while inode_num > 1 and inode is not None:
 s3_del_node(inode)
 print(lst1)
 
-print("Re-order list around value {}".format(lst1.head.value))
-s4_list_partition(lst1, lst1.head.value)
+print("Re-order list around value {}".format(lst1.head.val))
+s4_list_partition(lst1, lst1.head.val)
 print(lst1)
 
 print("Sum of lists \n {} \n {} \n {}".format(lst1, lst2, s5_sum_lists(lst1, lst2)))
@@ -194,7 +194,7 @@ print("Creating intersection: {} + {} ".format(l1_j, l2_k))
 nd2.next = nd1
 print(lst1)
 print(lst2)
-print(s7_get_intersection(lst1.head, lst2.head).value)
+print(s7_get_intersection(lst1.head, lst2.head).val)
 
 print(lst1)
 nd1 = None
@@ -206,6 +206,6 @@ while nd2.next is not None:
         nd1 = nd2
     nd2 = nd2.next
     counter += 1
-print("Last node is {} loop start is {}".format(nd2.value, nd1.value))
+print("Last node is {} loop start is {}".format(nd2.val, nd1.value))
 nd2.next = nd1
-print("Detected a loop at node {}".format(s8_detect_loop(lst1).value))
+print("Detected a loop at node {}".format(s8_detect_loop(lst1).val))

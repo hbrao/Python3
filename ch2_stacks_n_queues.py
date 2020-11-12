@@ -1,7 +1,7 @@
 from random import randint
-from pyds.classes.LinkedList import LinkedList
-from pyds.classes.LinkedStack import LinkedStack
-from pyds.classes.LinkedQueue import LinkedQueue
+from leet.impl.LinkedList import LinkedList
+from leet.impl.LinkedStack import LinkedStack
+from leet.impl.LinkedQueue import LinkedQueue
 l = LinkedList()
 s = LinkedStack()
 q = LinkedQueue()

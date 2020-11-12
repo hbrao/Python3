@@ -1,15 +1,17 @@
-from pyds.core.LinkedNode import LinkedNode 
+from leet.core.ListNode import ListNode
+
+
 class LinkedList:
     def __init__(self):
         self.head = None
 
     def prepend(self, value):
         """adds element at the start of the list O(1)"""
-        self.head = LinkedNode(value, self.head)
+        self.head = ListNode(value, self.head)
 
     def append(self, value):
         """adds element at the end of the list O(n)"""
-        n = LinkedNode(value)
+        n = ListNode(value)
         if self.head is None:
             self.head = n
             return self.head
@@ -31,7 +33,7 @@ class LinkedList:
         """Iterator of values in the list"""
         n = self.head
         while n is not None:
-            yield n.value
+            yield n.val
             n = n.next
 
     def __repr__(self):

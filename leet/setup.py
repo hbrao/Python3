@@ -1,7 +1,7 @@
 from setuptools import setup,find_packages
 
 setup(
-    name='pyds',
+    name='leet',
     version='1.0',
     description='Python Data Structures',
     author='Hanumantha Rao Banda',

@@ -1,7 +1,7 @@
-from pyds.classes.LinkedQueue import LinkedQueue
-from pyds.classes.BinaryTree import  BinaryTree
-from pyds.classes.DirectedGraphAL import DirectedGraphAL
-from pyds.core.TreeNode import TreeNode
+from leet.impl.LinkedQueue import LinkedQueue
+from leet.impl.BinarySearchTree import BinarySearchTree
+from leet.impl.DirectedGraphAL import DirectedGraphAL
+from leet.core.TreeNode import TreeNode
 from random import randint
 
 
@@ -38,8 +38,8 @@ def s2_helper(bt, arr, s, e):
         s2_helper(bt, arr, mid + 1, e)
 
 
-def s2_build_tree_sorted_array(arr) -> BinaryTree:
-    bt = BinaryTree()
+def s2_build_tree_sorted_array(arr) -> BinarySearchTree:
+    bt = BinarySearchTree()
     s2_helper(bt, arr, 0, len(arr) - 1)
     return bt
 
@@ -48,12 +48,12 @@ def s3_bfs_tree(bn: TreeNode, depth, res):
     if bn is not None:
         if depth >= len(res):
             res.append([])
-        res[depth].append(bn.value)
+        res[depth].append(bn.val)
         s3_bfs_tree(bn.left, depth + 1, res)
         s3_bfs_tree(bn.right, depth + 1, res)
 
 
-def s3_collect_nodes(bt: BinaryTree) -> []:
+def s3_collect_nodes(bt: BinarySearchTree) -> []:
     res = []
     s3_bfs_tree(bt.root, 0, res)
     return res
@@ -74,7 +74,8 @@ btr1 = s2_build_tree_sorted_array(arr1)
 
 print(s3_collect_nodes(btr1))
 
-btr2 = BinaryTree()
+btr2 = BinarySearchTree()
+
 btr2.add(30)
 btr2.add(15)
 btr2.add(45)
@@ -85,15 +86,5 @@ btr2.add(55)
 btr2.add(31)
 btr2.add(38)
 
-btr3 = BinaryTree()
-btr3.add(30)
-btr3.add(15)
-btr3.add(45)
-btr3.add(10)
-btr3.add(25)
-btr3.add(35)
-btr3.add(55)
-btr3.add(31)
-btr3.add(38)
-btr3.add(36)
+print(btr2)
 

@@ -1,4 +1,6 @@
-from pyds.core.LinkedNode import LinkedNode
+from leet.core.ListNode import ListNode
+
+
 class LinkedQueue:
     def __init__(self):
         self.head = None
@@ -9,7 +11,7 @@ class LinkedQueue:
 
     def enqueue(self, value):
         """Add element at the tail end of list O(1)"""
-        n = LinkedNode(value)
+        n = ListNode(value)
         if self.is_empty():
             self.head = self.tail = n
         else:
@@ -19,7 +21,7 @@ class LinkedQueue:
     def deque(self):
         """Remove element from front end of the list O(1)"""
         if not self.is_empty():
-            n = self.head.value
+            n = self.head.val
             self.head = self.head.next
             return n
         else:
@@ -29,7 +31,7 @@ class LinkedQueue:
         if not self.is_empty():
             n = self.head
             while n is not None:
-                yield n.value
+                yield n.val
                 n = n.next
 
     def __repr__(self):
