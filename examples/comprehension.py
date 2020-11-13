@@ -1,6 +1,8 @@
+from random import randint
+
 data = [1, 2, 3, 4, 5, 6, 7]
 
-except3 = [ val for i,val in enumerate(data) if i != 3 ]
+except3 = [val for i, val in enumerate(data) if i != 3]
 print(except3)
 
 odds = [val for val in data if not val % 2 == 0]
@@ -13,3 +15,9 @@ print(data)
 data = 'So long and thanks for all the fish'.split()
 data = [val.title() for val in data]
 print(data)
+
+d = [1, 2, 3, 4, 5, 6, 7]
+p = {d[i]: randint(1, 100) for i in range(len(d))}
+print(p)
+d.sort(key=lambda v: p[v])
+print(d)
