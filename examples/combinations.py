@@ -1,5 +1,5 @@
 nums = [i * i for i in range(10)]
-# Following logic prints n ! / 2 ! * (n-2) ! combinations.
+# Following logic prints n ! / k ! * (n-k) ! combinations where k=2.
 n = len(nums)
 pairs = []
 for i in range(n):
