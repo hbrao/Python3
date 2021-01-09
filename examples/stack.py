@@ -1,5 +1,16 @@
-stk = [1]
-stk.append(2)
-stk.append(3)
-while len(stk) > 0 :
-    print(stk.pop())
+class Stack:
+    def __init__(self):
+        self.data = []
+
+    def push(self, val):
+        self.data.append(val)
+
+    def pop(self):
+        if len(self.data) > 0:
+            return self.data.pop()
+
+
+class MonotonicStack:
+    def __init__(self, data):
+        self.data = data
+        self.mono = []

@@ -8,8 +8,7 @@ class DirectedGraphAL:
         # Create an adjacency list to store all edges emanating from vertex u
         if self.vertices[u] is None:
             self.vertices[u] = []
-        # Edge information is stored as tuple and can't be updated.
-        # Hence, remove if an edge is already existing.
+        # Following logic is needed for adding same edge with different weight
         for e in self.vertices[u]:
             if e[0] == v:
                 print("Removing an existing edge {} from {}".format(e, u))
