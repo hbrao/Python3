@@ -17,15 +17,24 @@ class DirectedGraphAL:
         # Add edge info with weight.
         self.vertices[u].append((v, w))
 
-    def neighbors(self, u):
+    def edges(self, u):
         if self.vertices[u]:
             for e in self.vertices[u]:
                 yield e
 
+    def __iter__(self):
+        for i in range(len(self.vertices)):
+            yield i
+
     def __repr__(self):
-        rep = 'grh:['
-        for v in range(self.size):
-            for e in self.neighbors(v):
-                rep += str(v) + '->' + str(e) + ', '
-        rep += ']'
-        return rep
+        return "Edges: " + " ; ".join([str([i, self.vertices[i]]) for i in range(len(self.vertices))])
+
+
+g1 = DirectedGraphAL(3)
+g1.add_edge(0, 1)
+g1.add_edge(2, 1)
+g1.add_edge(2, 0)
+print("Vertices: " + ",".join([str(i) for i in g1]))
+print("Edges of vertex 2: ")
+for (v, w) in g1.edges(2):
+    print("  2 -- [" + str(w) + "] --> " + str(v))
