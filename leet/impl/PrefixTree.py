@@ -32,10 +32,11 @@ class PrefixTree:
             return False
 
 
-d = PrefixTree()
-d.add('inch')
-d.add('in')
+if __name__ == '__main__':
+    d = PrefixTree()
+    d.add('inch')
+    d.add('in')
 
-print('in' in d)
-print('inc' in d)
-print('inch' in d)
+    print('in' in d)
+    print('inc' in d)
+    print('inch' in d)

@@ -30,11 +30,12 @@ class DirectedGraphAL:
         return "Edges: " + " ; ".join([str([i, self.vertices[i]]) for i in range(len(self.vertices))])
 
 
-g1 = DirectedGraphAL(3)
-g1.add_edge(0, 1)
-g1.add_edge(2, 1)
-g1.add_edge(2, 0)
-print("Vertices: " + ",".join([str(i) for i in g1]))
-print("Edges of vertex 2: ")
-for (v, w) in g1.edges(2):
-    print("  2 -- [" + str(w) + "] --> " + str(v))
+if __name__ == '__main__':
+    g1 = DirectedGraphAL(3)
+    g1.add_edge(0, 1)
+    g1.add_edge(2, 1)
+    g1.add_edge(2, 0)
+    print("Vertices: " + ",".join([str(i) for i in g1]))
+    print("Edges of vertex 2: ")
+    for (v, w) in g1.edges(2):
+        print("  2 -- [" + str(w) + "] --> " + str(v))

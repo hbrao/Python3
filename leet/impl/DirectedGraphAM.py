@@ -20,9 +20,10 @@ class DirectedGraphAM:
         return "Edges: " + " ; ".join([str([u, self.edges[u]]) for u in self.edges])
 
 
-g1 = DirectedGraphAM()
-g1.add_edge('a', 'b')
-g1.add_edge('c', 'b')
-g1.add_edge('c', 'a')
-print("Vertices: " + ",".join(g1))
-print(g1)
+if __name__ == '__main__':
+    g1 = DirectedGraphAM()
+    g1.add_edge('a', 'b')
+    g1.add_edge('c', 'b')
+    g1.add_edge('c', 'a')
+    print("Vertices: " + ",".join(g1))
+    print(g1)
