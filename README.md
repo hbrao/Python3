@@ -1,3 +1,3 @@
 # Python3
 
-Samples
+Language basics
